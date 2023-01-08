@@ -19,10 +19,9 @@ var employees = [
         email : 'c@gmail.com',
         salary: 10000000,
         city: 'Quy Nhon'
-    },
+    }
 ]
-var index = employees.length
-console.log(index)
+
 function renderEmployee(arr){
     var renderEmp = document.getElementById('list');
     renderEmp.innerHTML = '';
@@ -40,6 +39,7 @@ function renderEmployee(arr){
     );
 }
 renderEmployee(employees);
+
 function addEmployee(){
     let id = employees.length + 1
     let name = document.getElementById('name').value;
