@@ -62,7 +62,12 @@ function addEmployee(){
 }
 
 function deleteEmp(idx){ 
-    employees.splice(idx-1,1)
+    if(employees.length > 1){
+        employees.splice(idx,1)
+    } else{
+        employees.splice(0,1)
+    }
+
     renderEmployee(employees);
 }
 document.getElementById("submit-form").addEventListener("click", function(event){
