@@ -41,6 +41,7 @@ function renderEmployee(arr){
 renderEmployee(employees);
 
 function addEmployee(){
+    
     let id = employees.length + 1
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
@@ -60,8 +61,10 @@ function addEmployee(){
     document.getElementById('city').value = '';
 }
 
-function deleteEmp(){
-    let idx = employees.id
-    employees.splice(idx,1);
+function deleteEmp(idx){ 
+    employees.splice(idx-1,1)
     renderEmployee(employees);
 }
+document.getElementById("submit-form").addEventListener("click", function(event){
+    event.preventDefault()
+  });
